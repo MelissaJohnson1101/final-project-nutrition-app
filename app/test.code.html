@@ -1,0 +1,97 @@
+//previous login route
+import {AuthenticationService, User} from '../services/authentication.service';
+
+@Component({
+    selector: 'login-form',
+    directives: [AuthenticationService],
+    template: `
+        <div>
+            <div>
+                Welcome
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div>
+                        <input [(ngModel)]="user.email" id="email" 
+                            type="email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+ 
+                <div class="row">
+                    <div>
+                        <input [(ngModel)]="user.password" id="password" 
+                            type="password">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+ 
+                <span>{{errorMsg}}</span>
+                <button (click)="login()" 
+                    type="submit" name="action">Login</button>
+            </div>
+        </div>
+    	`
+})
+
+export class LoginComponent {
+
+    public user = new User('', '');
+    public errorMsg = '';
+
+    constructor(
+        private _service: AuthenticationService) { }
+
+    login() {
+        if (!this._service.login(this.user)) {
+            this.errorMsg = 'Failed to login';
+        }
+    }
+}
+
+
+//from previous auth page
+
+import {Injectable} from '@angular/core'; 
+import {Router} from '@angular/router';
+
+export class User {
+  constructor(
+    public email: string,
+    public password: string) { }
+}
+
+var users = [
+  new User('guest@guest.com', 'guest'),
+  new User('user@gmail.com', 'user')
+];
+
+@Injectable()
+export class AuthenticationService {
+
+  constructor(
+    private _router: Router) { }
+
+  logout() {
+    localStorage.removeItem("user");
+    this._router.navigate(['Login']);
+  }
+
+  login(user) {
+    var authenticatedUser = users.find(u => u.email === user.email);
+    if (authenticatedUser) {
+      localStorage.setItem("user", authenticatedUser);
+      this._router.navigate(['Home']);
+      return true;
+    }
+    return false;
+
+  }
+
+  checkCredentials() {
+    if (localStorage.getItem("user") === null) {
+      this._router.navigate(['Login']);
+    }
+  }
+}

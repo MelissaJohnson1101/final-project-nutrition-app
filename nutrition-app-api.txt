@@ -1,0 +1,10 @@
+SPA
+
+POST / login
+	AJAX that returns user info or error
+
+POST / foods (AJAX)
+	Save foods into DB
+
+GET / food log 
+	render food log page

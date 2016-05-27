@@ -1,0 +1,56 @@
+
+    <div class="food-choice-toggle">
+    <div class="container-fluid" style="">
+
+                <div class="jumbotron">
+                    <h2>Food Choices</h2>
+                    <p>Choose what foods you ate today.</p>
+                </div>
+
+                <div class="panel-group" id="accordion">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion">Food Category
+                        </a></h4>
+                        </div>
+                        <div class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <label>Click to add foods</label>
+                                            <td>
+                                                <input type="checkbox">
+                                                 {{cat.name}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button class="add-button">Add</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                 </div>
+                 	</div>
+
+
+
+    <div class="food-choice-class" >
+	<div *ngFor="let cat of listoffoods" >
+		<h3>{{cat.name}}</h3>
+		<div *ngFor="let food of cat.foods" >
+		{{food.name}}
+</div>
+	</div>
+		</div>
+
+
