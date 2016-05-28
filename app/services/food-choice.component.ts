@@ -27,7 +27,7 @@ export class FoodChoicesComponent {
 					points: 5
 				}
 			]
-		}
+		},
 
 				{
 			name: "Fruits",
@@ -49,7 +49,7 @@ export class FoodChoicesComponent {
 					points: 6
 				}
 			]
-		}
+		},
 {
 			name: "Grains",
 			foods: [
@@ -70,7 +70,7 @@ export class FoodChoicesComponent {
 					points: 5
 				}
 			]
-		}
+		},
 
 		{
 			name: "Dairy",
@@ -93,7 +93,6 @@ export class FoodChoicesComponent {
 				}
 			]
 		}
-
 
 	]
 }

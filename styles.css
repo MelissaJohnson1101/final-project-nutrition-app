@@ -5,8 +5,6 @@ h1 {
 }
 
 .food-choice-class{
-  border: 2px solid black;
-  max-width: 200px;
 }
 .food-choice-toggle{
   width: 100%;

@@ -9,38 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-// import { LoginComponent } from './routes/login-in.component';
-// import { PrivateInfoComponent } from './services/private-info.component';
+var food_choice_component_1 = require('./services/food-choice.component');
+var avatar_component_1 = require('./services/avatar.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            directives: [router_1.ROUTER_DIRECTIVES],
-            template: "\n            <div>\n            <h1>Hello!</h1>\n            <router-outlet></router-outlet>\n            </div>\n        "
-        }),
-        router_1.Routes([
-            {
-                path: '/',
-                component: LoginComponent
-            },
-            {
-                path: '/home/login',
-                component: LoginComponent
-            },
-        ]), 
+            directives: [food_choice_component_1.FoodChoicesComponent, avatar_component_1.AvatarAreaComponent],
+            template: "\n\t\t\t\t<h1>FOOD APP</h1>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t<div class = \"col-md-6\"> <food-choice> </food-choice></div>\n\t\t\t\t<div class = \"col-md-6\"> <avatar-area> </avatar-area></div>\n\t\t\t\t</div> "
+        }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-// directives: [FoodChoicesComponent, AvatarAreaComponent],
-// template: `< h1 > FOOD APP< /h1>
-// 			< div class="row" >
-// 			<div class = "col-md-6" > <food-choice > </food-choice></div>
-// 			<div class = "col-md-6" > <avatar-area > </avatar-area></div>
-// 			</div>
-// 			export class AppComponent { }
 //# sourceMappingURL=app.component.js.map

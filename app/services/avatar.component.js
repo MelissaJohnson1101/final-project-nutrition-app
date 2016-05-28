@@ -15,7 +15,7 @@ var AvatarAreaComponent = (function () {
     AvatarAreaComponent = __decorate([
         core_1.Component({
             selector: 'avatar-area',
-            templateUrl: 'app/templates/avatar.template.html',
+            templateUrl: 'app/templates/avatar.template.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AvatarAreaComponent);
