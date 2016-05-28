@@ -24,7 +24,7 @@
                                             <label>Click to add foods</label>
                                             <td>
                                                 <input type="checkbox">
-                                                 {{cat.name}}
+                                                 
                                             </td>
                                         </tr>
                                         <tr>
@@ -42,8 +42,6 @@
                  </div>
                  	</div>
 
-
-
     <div class="food-choice-class" >
 	<div *ngFor="let cat of listoffoods" >
 		<h3>{{cat.name}}</h3>
@@ -52,5 +50,37 @@
 </div>
 	</div>
 		</div>
+
+        <div class="panel-group" id="accordion">
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+Variable</a>
+</h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                            <table class="table  table-striped">
+                                <tr>
+                                    <td>Declare as a new variable.</td>
+                                    <td>
+                                        <input type="checkbox" id="declared" value="declare">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <button onclick="makeVar()">Make Variable</button>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
