@@ -9,17 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var food_choice_component_1 = require('./services/food-choice.component');
-var avatar_component_1 = require('./services/avatar.component');
+var router_1 = require('@angular/router');
+var login_route_component_1 = require('./routes/login-route-component');
+var userloggedin_route_component_1 = require('./routes/userloggedin-route.component');
+var toggle_service_show_component_1 = require('./services/toggle-service-show.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            directives: [food_choice_component_1.FoodChoicesComponent, avatar_component_1.AvatarAreaComponent],
-            template: "\n\t\t\t\t<h1>FOOD APP</h1>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t<div class = \"col-md-6\"> <food-choice> </food-choice></div>\n\t\t\t\t<div class = \"col-md-6\"> <avatar-area> </avatar-area></div>\n\t\t\t\t</div> "
-        }), 
+            directives: [router_1.ROUTER_DIRECTIVES, login_route_component_1.LoginViewComponent, userloggedin_route_component_1.UserLoggedinViewComponent, toggle_service_show_component_1.CollapseFeature],
+            template: "<div>\n\t\t\t  \t<a [routerLink]=\"['/login']\">Login</a>\n\t\t\t  \t<router-outlet></router-outlet>\n\t\t\t  </div>"
+        }),
+        router_1.Routes([
+            {
+                path: '/',
+                component: login_route_component_1.LoginViewComponent
+            },
+            {
+                path: '/login',
+                component: login_route_component_1.LoginViewComponent
+            },
+            {
+                path: '/userloggedin',
+                component: userloggedin_route_component_1.UserLoggedinViewComponent
+            },
+            {
+                path: './toggle-test',
+                component: toggle_service_show_component_1.CollapseFeature
+            }
+        ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;

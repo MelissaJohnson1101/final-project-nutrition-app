@@ -1,86 +1,24 @@
 
     <div class="food-choice-toggle">
-    <div class="container-fluid" style="">
+    <div class="container">
 
-                <div class="jumbotron">
-                    <h2>Food Choices</h2>
+                <div class="food-choice-title">
+                    <h3>Food Choices</h3>
                     <p>Choose what foods you ate today.</p>
-                </div>
-
-                <div class="panel-group" id="accordion">
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion">Food Category
-                        </a></h4>
-                        </div>
-                        <div class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                                <div>
-                                    <table>
-                                        <tr>
-                                            <label>Click to add foods</label>
-                                            <td>
-                                                <input type="checkbox">
-                                                 
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button class="add-button">Add</button>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
                  </div>
                  	</div>
 
     <div class="food-choice-class" >
 	<div *ngFor="let cat of listoffoods" >
-		<h3>{{cat.name}}</h3>
+		<h4>{{cat.name}}</h4>
 		<div *ngFor="let food of cat.foods" >
-		{{food.name}}
+      <input type="checkbox" id="test5" />
+      <label for="test5">{{food.name}}</label>
 </div>
-	</div>
+	</div><br>
+
 		</div>
 
-        <div class="panel-group" id="accordion">
-
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-Variable</a>
-</h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse">
-                    <div class="panel-body">
-                            <table class="table  table-striped">
-                                <tr>
-                                    <td>Declare as a new variable.</td>
-                                    <td>
-                                        <input type="checkbox" id="declared" value="declare">
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <button onclick="makeVar()">Make Variable</button>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 

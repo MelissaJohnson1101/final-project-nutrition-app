@@ -1,48 +1,135 @@
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+h1, h2 {
+  text-align: center;
+}
+
+nav {
+    color: #fff;
+    background-color: #004E5A;
+    width: 100%;
+}
+
+p {
+  color:white;
+}
+label{
+  color:white;
+}
+@media only screen and (min-width: 993px){
+  .container {
+  width: 100%;
+}
+}
+.navbar-fixed{
+  width: auto;
+}
+
+#foodchoicebackground{
+  background-color: #F9BE02;
+}
+
+.food-choice-title{
+  color: white;
+}
+.collapsible{
+  width:100%;
+}
+
+#boy-background{
+background-color:#7CDBD5;
+height: 80%;
+}
+
+.pointsdisp{
+  width: 200px;
+  margin-top: 125px;
+  border-style: solid;
+  border-color: red;
+  border-width: 1px;
+  padding-left:0px;
 }
 
 .food-choice-class{
+  margin-left: 30px;
 }
+
 .food-choice-toggle{
   width: 100%;
+}
+/*@-webkit-keyframes mymove {*/
+/*    0%   {top: 0px;}
+    25%  {top: 500px;}
+    75%  {top: 20px}
+    100% {top: 50px;}*/
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
 }
 
 .avatar-boy {
   width: 100px;
-  margin-right: 300px;
-  margin-top: 100px;
-
+  padding-left: 100px;
 }
 
 body {
   margin: 2em;
 }
 
-.creatures {
-  width: 50%;
-  height: 50%;
+.creatures{
+/*  width: 50%;
+  height: 50%;*/
+  margin-top: 30px;
+  margin-left: 50px;
   background-color: none;
-  margin-top: -120px;
-  border: 10px;
-  border-color: black;
   position: relative;
-    float: right;
-    height: 50%
-  top: 0;
-  left: 0;
+} 
+#loginform{
+  width:50%;
+  margin-left: 25%;
+  padding-top:30px;
+  padding-bottom: 0px;
+}
+.creatures-login{
+  width: 50%;
+  margin: 0 auto;
+  background-color: none;
+  bottom-top: -130px;
+  position: relative;
 } 
 
- /* position: absolute; */
+ .human-login {
+/*  width: 50%;
+  height: 50%;*/
+ /* float: left;*/
+  margin: 0 auto;
+  padding-top: 130px;
+  background-color: none;     
+  overflow: show;
+}
 
-.human {
+.human-home:hover {
   width: 50%;
   height: 50%;
   float: left;
   background-color: none;     
   overflow: show;
+  animation: shake 0.52s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 100px;
 }
 
 /* #7CDBD5 */
@@ -197,13 +284,24 @@ body {
   border-radius: 50px 50px 50px 50px;
 }
 
-.human .body {
+.human-login .body {
   height: 140px;
   width: 100px;
   background-color: #F9BE02;
   margin: 30px auto 0;
   position: relative;
   z-index: 2;
+}
+
+.human-home .body {
+  height: 140px;
+  width: 100px;
+  background-color: #F9BE02;
+  margin: 30px auto 0;
+  position: relative;
+  z-index: 2;
+  -webkit-animation: mymove 4s infinite; 
+  animation: mymove 4s infinite> 
 }
 
 .body .top {
@@ -237,7 +335,17 @@ body {
   right: -21px;
 }
 
-.human .body .shirt {
+.human-login .body .shirt {
+  height: 160px;
+  margin: 0 auto;
+  width: 30%;  
+  background-color: #F7323C;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  margin-left: -15%;
+}
+.human-home .body .shirt {
   height: 160px;
   margin: 0 auto;
   width: 30%;  
