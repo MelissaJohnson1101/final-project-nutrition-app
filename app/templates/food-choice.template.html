@@ -1,3 +1,28 @@
+    
+    <div class="food-choice-class"> 
+      <ul materialize="collapsible" class="collapsible" data-collapsible="accordion">
+          <li *ngFor="let cat of foodservice.listoffoods">
+            <div class="collapsible-header">
+              <div >
+                <h4>{{cat.name}}</h4>
+              </div>
+            </div>
+        <div class="collapsible-body">
+          <div *ngFor="let food of cat.foods">
+            <div class="input-field">
+              <input type="checkbox" id="food_check{{cat.name}}_{{food.name}}"/>
+                <label attr.for="food_check{{cat.name}}_{{food.name}}">{{food.name}}</label> 
+            </div>
+          </div>
+        </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+<!-- 
+
 
 <div class="food-choice-toggle">
   <div class="container">
@@ -7,14 +32,12 @@
     </div>
 
     <div class="food-choice-class input-field">
-      <div *ngFor="let cat of listoffoods">
+      <div *ngFor="let cat of foodservice.listoffoods">
 		      <h4>{{cat.name}}</h4>
 		      <div *ngFor="let food of cat.foods">
           <div class = "input-field">
-    <!--         <select multiple> -->
             <input type="checkbox" id="food_check{{cat.name}}_{{food.name}}"/>
-            <label attr.for="food_check{{cat.name}}_{{food.name}}">{{food.name}}</label> 
-<!--             </select>     --> 
+            <label attr.for="food_check{{cat.name}}_{{food.name}}">{{food.name}}</label>    
           </div>
         </div>
       </div> 
@@ -25,4 +48,6 @@
 
 
 
+
+ -->
 

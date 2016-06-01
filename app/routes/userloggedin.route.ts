@@ -3,11 +3,9 @@ import { FoodComponent } from '../components/food.component';
 import { AvatarComponent } from '../components/avatar.component';
 import { PointsComponent } from '../components/points.component';
 import { ChallengeComponent } from '../components/challenge.component';
-import { AccordianComponent } from '../components/accordian.component'
-
 
 @Component({
-	directives: [FoodComponent, AvatarComponent, ChallengeComponent, AccordianComponent],
+	directives: [FoodComponent, AvatarComponent, ChallengeComponent],
 	selector: 'user-loggedin-view',
 	template: `
 				
@@ -18,7 +16,7 @@ import { AccordianComponent } from '../components/accordian.component'
 				</div> 
 				<div class="row">
 				<div id="challenge-area" class= "col s6"> <challenge-area> </challenge-area></div>
-				<div id="points-area" class= "col s6"> <accordian-area> </accordian-area></div>
+				<div id="points-area" class= "col s6"></div>
 				</div> 
 				`
 })

@@ -9,101 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var food_service_1 = require('../services/food.service');
+var angular2_materialize_1 = require("angular2-materialize");
 var FoodComponent = (function () {
-    function FoodComponent() {
-        this.listoffoods = [
-            {
-                name: "Vegetables",
-                foods: [
-                    {
-                        name: "broccoli",
-                        points: 5
-                    },
-                    {
-                        name: "carrot",
-                        points: 2
-                    },
-                    {
-                        name: "green beans",
-                        points: 3
-                    },
-                    {
-                        name: "asparagus",
-                        points: 5
-                    }
-                ]
-            },
-            {
-                name: "Fruits",
-                foods: [
-                    {
-                        name: "apples",
-                        points: 4
-                    },
-                    {
-                        name: "strawberries",
-                        points: 3
-                    },
-                    {
-                        name: "peaches",
-                        points: 3
-                    },
-                    {
-                        name: "watermelon",
-                        points: 6
-                    }
-                ]
-            },
-            {
-                name: "Grains",
-                foods: [
-                    {
-                        name: "rice",
-                        points: 2
-                    },
-                    {
-                        name: "bread",
-                        points: 1
-                    },
-                    {
-                        name: "quinoa",
-                        points: 2
-                    },
-                    {
-                        name: "millet",
-                        points: 5
-                    }
-                ]
-            },
-            {
-                name: "Dairy",
-                foods: [
-                    {
-                        name: "milk",
-                        points: 2
-                    },
-                    {
-                        name: "cheese",
-                        points: 5
-                    },
-                    {
-                        name: "cottage cheese",
-                        points: 2
-                    },
-                    {
-                        name: "yogurt",
-                        points: 4
-                    }
-                ]
-            }
-        ];
+    function FoodComponent(foodservice) {
+        this.foodservice = foodservice;
     }
     FoodComponent = __decorate([
         core_1.Component({
             selector: 'food-choice',
-            templateUrl: 'app/templates/food-choice.template.html'
+            templateUrl: 'app/templates/food-choice.template.html',
+            directives: [angular2_materialize_1.MaterializeDirective],
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [food_service_1.FoodService])
     ], FoodComponent);
     return FoodComponent;
 }());

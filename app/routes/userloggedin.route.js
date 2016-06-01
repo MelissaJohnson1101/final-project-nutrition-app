@@ -12,15 +12,14 @@ var core_1 = require('@angular/core');
 var food_component_1 = require('../components/food.component');
 var avatar_component_1 = require('../components/avatar.component');
 var challenge_component_1 = require('../components/challenge.component');
-var accordian_component_1 = require('../components/accordian.component');
 var UserLoggedinRoute = (function () {
     function UserLoggedinRoute() {
     }
     UserLoggedinRoute = __decorate([
         core_1.Component({
-            directives: [food_component_1.FoodComponent, avatar_component_1.AvatarComponent, challenge_component_1.ChallengeComponent, accordian_component_1.AccordianComponent],
+            directives: [food_component_1.FoodComponent, avatar_component_1.AvatarComponent, challenge_component_1.ChallengeComponent],
             selector: 'user-loggedin-view',
-            template: "\n\t\t\t\t\n\t\t\t\t<div style=\"text-align:center\"><h1>Mutano Kid</h1></div><br>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t<div id=\"foodchoicebackground\" class= \"col s6\"> <food-choice> </food-choice></div>\n\t\t\t\t<div id=\"boy-background\" class= \"col s6\"> <avatar-area> </avatar-area></div>\n\t\t\t\t</div> \n\t\t\t\t<div class=\"row\">\n\t\t\t\t<div id=\"challenge-area\" class= \"col s6\"> <challenge-area> </challenge-area></div>\n\t\t\t\t<div id=\"points-area\" class= \"col s6\"> <accordian-area> </accordian-area></div>\n\t\t\t\t</div> \n\t\t\t\t"
+            template: "\n\t\t\t\t\n\t\t\t\t<div style=\"text-align:center\"><h1>Mutano Kid</h1></div><br>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t<div id=\"foodchoicebackground\" class= \"col s6\"> <food-choice> </food-choice></div>\n\t\t\t\t<div id=\"boy-background\" class= \"col s6\"> <avatar-area> </avatar-area></div>\n\t\t\t\t</div> \n\t\t\t\t<div class=\"row\">\n\t\t\t\t<div id=\"challenge-area\" class= \"col s6\"> <challenge-area> </challenge-area></div>\n\t\t\t\t<div id=\"points-area\" class= \"col s6\"></div>\n\t\t\t\t</div> \n\t\t\t\t"
         }), 
         __metadata('design:paramtypes', [])
     ], UserLoggedinRoute);
