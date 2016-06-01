@@ -5,4 +5,4 @@ import { Component, Input } from '@angular/core';
 	templateUrl: 'app/templates/avatar.template.html'
 })
 
-export class AvatarAreaComponent { }
+export class AvatarComponent { }

@@ -9,17 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AvatarAreaComponent = (function () {
-    function AvatarAreaComponent() {
+var angular2_materialize_1 = require("angular2-materialize");
+var AccordianComponent = (function () {
+    function AccordianComponent() {
     }
-    AvatarAreaComponent = __decorate([
+    AccordianComponent = __decorate([
         core_1.Component({
-            selector: 'avatar-area',
-            templateUrl: 'app/templates/avatar.template.html'
+            selector: 'accordian-area',
+            directives: [angular2_materialize_1.MaterializeDirective],
+            templateUrl: 'app/templates/accordian.template.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AvatarAreaComponent);
-    return AvatarAreaComponent;
+    ], AccordianComponent);
+    return AccordianComponent;
 }());
-exports.AvatarAreaComponent = AvatarAreaComponent;
-//# sourceMappingURL=avatar.component.js.map
+exports.AccordianComponent = AccordianComponent;
+//# sourceMappingURL=accordian.component.js.map

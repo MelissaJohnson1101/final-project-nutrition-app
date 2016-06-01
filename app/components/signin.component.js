@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var LoginViewComponent = (function () {
-    function LoginViewComponent() {
+var SignInComponent = (function () {
+    function SignInComponent() {
     }
-    LoginViewComponent = __decorate([
+    SignInComponent = __decorate([
         core_1.Component({
             selector: 'login-view',
-            templateUrl: 'app/templates/login-view.template.html'
+            templateUrl: 'app/templates/signinform.template.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], LoginViewComponent);
-    return LoginViewComponent;
+    ], SignInComponent);
+    return SignInComponent;
 }());
-exports.LoginViewComponent = LoginViewComponent;
-//# sourceMappingURL=login-route-component.js.map
+exports.SignInComponent = SignInComponent;
+//# sourceMappingURL=signin.component.js.map

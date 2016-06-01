@@ -1,16 +1,19 @@
 h1, h2 {
   text-align: center;
 }
-
 nav {
     color: #fff;
     background-color: #004E5A;
     width: 100%;
 }
+.navbar-fixed{
+  width: auto;
+}
 
 p {
   color:white;
 }
+
 .input-field label{
   color:white;
 }
@@ -27,8 +30,14 @@ p {
   width: 100%;
 }
 }
-.navbar-fixed{
-  width: auto;
+#challenge-area {
+  height:500px;
+  background-color: #A4D555;
+}
+
+#points-area {
+  height:500px;
+  background-color: #E37222; 
 }
 
 #foodchoicebackground{
@@ -44,7 +53,7 @@ p {
 
 #boy-background{
 background-color:#7CDBD5;
-height: 80%;
+height: 500px;
 }
 
 .pointsdisp{
@@ -64,16 +73,5 @@ height: 80%;
   white-space: wrap;
   width: 100%;
 }
-/*@-webkit-keyframes mymove {*/
-/*    0%   {top: 0px;}
-    25%  {top: 500px;}
-    75%  {top: 20px}
-    100% {top: 50px;}*/
 
 
-#loginform{
-  width:50%;
-  margin-left: 25%;
-  padding-top:30px;
-  padding-bottom: 0px;
-}

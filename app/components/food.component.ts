@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
 	templateUrl: 'app/templates/food-choice.template.html'
 
 })
-export class FoodChoicesComponent {
+export class FoodComponent {
 	listoffoods: any = [
 		{
 			name: "Vegetables",

@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES, Routes } from '@angular/router';
-import { FoodChoicesComponent } from './services/food-choice.component';
-import { AvatarAreaComponent } from './services/avatar.component';
-import { LoginViewComponent } from './routes/login-route-component';
-import {UserLoggedinViewComponent} from './routes/userloggedin-route.component';
-import {CollapseFeature} from './services/toggle-service-show.component';
+import { FoodComponent } from './components/food.component';
+import { AvatarComponent } from './components/avatar.component';
+import { SignInComponent } from './components/signin.component';
+import { UserLoggedinRoute } from './routes/userloggedin.route';
 
 @Component({
 	selector: 'my-app',
-	directives: [ROUTER_DIRECTIVES, LoginViewComponent, UserLoggedinViewComponent, CollapseFeature],
+	directives: [ROUTER_DIRECTIVES, SignInComponent, UserLoggedinRoute],
     template: `<div>
 			  	<a [routerLink]="['/login']">Login</a>
 			  	<router-outlet></router-outlet>
@@ -17,19 +16,15 @@ import {CollapseFeature} from './services/toggle-service-show.component';
 @Routes([
 	{
 		path: '/',
-		component: LoginViewComponent
+		component: SignInComponent
 	},
 	{
 		path: '/login',
-		component: LoginViewComponent
+		component: SignInComponent
 	},
 	{
 		path: '/userloggedin',
-		component: UserLoggedinViewComponent
-	},
-	{
-		path: './toggle-test',
-		component: CollapseFeature
+		component: UserLoggedinRoute
 	}
 ])
 

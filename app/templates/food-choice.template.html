@@ -1,24 +1,28 @@
 
-    <div class="food-choice-toggle">
-    <div class="container">
+<div class="food-choice-toggle">
+  <div class="container">
+    <div class="food-choice-title">
+        <h3>Food Choices</h3>
+        <p>Choose what foods you ate today.</p>
+    </div>
 
-                <div class="food-choice-title">
-                    <h3>Food Choices</h3>
-                    <p>Choose what foods you ate today.</p>
-                </div>
-                 </div>
-                 	</div>
-
-    <div class="food-choice-class" >
-	<div *ngFor="let cat of listoffoods" >
-		<h4>{{cat.name}}</h4>
-		<div *ngFor="let food of cat.foods" >
-      <input type="checkbox" id="test5" />
-      <label for="test5">{{food.name}}</label>
+    <div class="food-choice-class input-field">
+      <div *ngFor="let cat of listoffoods">
+		      <h4>{{cat.name}}</h4>
+		      <div *ngFor="let food of cat.foods">
+          <div class = "input-field">
+    <!--         <select multiple> -->
+            <input type="checkbox" id="food_check{{cat.name}}_{{food.name}}"/>
+            <label attr.for="food_check{{cat.name}}_{{food.name}}">{{food.name}}</label> 
+<!--             </select>     --> 
+          </div>
+        </div>
+      </div> 
+    </div>  
+  </div>
 </div>
-	</div><br>
+<br>
 
-		</div>
 
 
 

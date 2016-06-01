@@ -1,0 +1,123 @@
+  {{diagnostic()}}
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">MUTANO KID</a>
+      </div>
+    </nav>
+  </div>
+
+<div class="container" id="home-login-view" >
+  <div [hidden]="submitted">
+<div><h1>Welcome to Mutano Kid</h1>
+<h2>Sign in</h2>
+</div>
+
+<div class="row form-group">
+    <form (ngSubmit)="onSubmit()" #userloginform="ngForm" id="loginform" class="col s12">
+      
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate form-control" required
+          [(ngModel)]="model.first_name" 
+          ngControl="first_name" #first_name="ngForm" >
+          <label for="first_name">First Name</label>
+              <div [hidden]="first_name.valid" class="alert alert-danger">
+                Name is required
+              </div>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate form-control" required
+          [(ngModel)]="model.last_name" 
+          ngControl="last_name" #last_name="ngForm" >
+          <label for="last_name">Last Name</label>
+            <div [hidden]="last_name.valid" class="alert alert-danger">
+                Name is required
+              </div>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate form-control" required 
+          [(ngModel)]="model.password" 
+          ngControl="password" #password="ngForm" >
+          <label for="password">Password</label>
+              <div [hidden]="password.valid" class="alert alert-danger">
+                password is required
+              </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate form-control" required 
+          [(ngModel)]="model.email"
+          ngControl="email" #email="ngForm" >
+          <label for="email">Email</label>
+              <div [hidden]="email.valid" class="alert alert-danger">
+                email is required
+              </div>
+        </div>
+      </div>
+         <button type="submit" class="btn btn-default"
+             [disabled]="!userloginform.form.valid">Submit</button>
+    </form>
+  </div>
+<!-- TODO: remove this: {{model.name}} -->
+ <div [hidden]= "!submitted">
+   <h2>You submitted the following:</h2>
+   <div class="row">
+     <div class="col-xs-3">First Name</div>
+     <div class="col-xs-9  pull-left">{{ model.first_name }}</div>
+   </div>
+   <div class="row">
+     <div class="col-xs-3">LastName</div>
+     <div class="col-xs-9  pull-left">{{ model.last_name }}</div>
+   </div>
+   <div class="row">
+     <div class="col-xs-3">Password</div>
+     <div class="col-xs-9 pull-left">{{ model.password }}</div>
+   </div>
+   <div class="row">
+     <div class="col-xs-3">Email</div>
+     <div class="col-xs-9 pull-left">{{ model.email }}</div>
+   </div>
+   <br>
+   <button class="btn btn-default" (click)="submitted=false">Edit</button>
+ </div>
+
+</div>
+     </div>
+
+
+
+<div>
+  <div class="creatures-login">   
+  <div class="human-login">
+    <div class="hat"></div>
+    <div class="head">
+      <div class="eyes left">
+        <div class="blink"></div>
+      </div>
+      <div class="eyes right">
+        <div class="blink"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+    <div class="body">
+      <div class="top"></div>
+      <div class="left side"></div>
+      <div class="right side"></div>
+      <div class="shirt"></div>
+      </div>
+
+      </div>
+    </div>
+    </div>
+
+    <script></script>
+
+        
