@@ -5,7 +5,6 @@ import { AvatarComponent } from './components/avatar.component';
 import { SignInComponent } from './components/signin.component';
 import { UserLoggedinRoute } from './routes/userloggedin.route';
 
-
 @Component({
 	selector: 'my-app',
 	directives: [ROUTER_DIRECTIVES, SignInComponent, UserLoggedinRoute],

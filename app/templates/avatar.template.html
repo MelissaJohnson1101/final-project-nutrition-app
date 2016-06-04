@@ -4,14 +4,14 @@
   <div class="creatures">   
   <div class="human-home">
     <div class="hat"></div>
-    <div class="head">
+    <div class="head"[ngClass]="{ifBroccolihead: broccoliChecked()}">
       <div class="eyes left">
-        <div class="blink"></div>
+        <div class="blink"[ngClass]="{ifBroccoliblink: broccoliChecked()}"></div>
       </div>
       <div class="eyes right">
-        <div class="blink"></div>
+        <div class="blink"[ngClass]="{ifBroccoliblink: broccoliChecked()}"></div>
       </div>
-      <div class="mouth"></div>
+      <div class="mouth" [ngClass]="{ifBroccolimouth: broccoliChecked()}" ></div>
     </div>
     <div class="body">
       <div class="top"></div>

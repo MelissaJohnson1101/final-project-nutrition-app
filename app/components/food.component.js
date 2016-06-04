@@ -15,6 +15,25 @@ var FoodComponent = (function () {
     function FoodComponent(foodservice) {
         this.foodservice = foodservice;
     }
+    FoodComponent.prototype.isChecked = function ($event, food) {
+        var checked = $event.target.checked;
+        if (checked) {
+            if (this.foodservice.checkedFoods.indexOf(food) == -1) {
+                this.foodservice.checkedFoods.push(food);
+            }
+        }
+        else {
+            var index = this.foodservice.checkedFoods.indexOf(food);
+            if (index >= 0) {
+                this.foodservice.checkedFoods.splice(index, 1);
+            }
+        }
+    };
+    FoodComponent.prototype.onSubmit = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            this.foodservice.foodDiaryArr.push(this.foodservice.checkedFoods[fd]);
+        }
+    };
     FoodComponent = __decorate([
         core_1.Component({
             selector: 'food-choice',

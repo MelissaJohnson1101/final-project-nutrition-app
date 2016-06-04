@@ -93,5 +93,40 @@ export class FoodService{
 		}
 
 	]
+	checkedFoods = []
+
+	// checkedFoods array is an array of objects containing name + points.
+	// within [i] of the array pick value of index of obj.
+	// [i] [0] = food name(val)
+	// [i] [1] = points(val)
+	
+	public foodDiaryArr = [];	
+	
+
+	getUserPoints(){
+		let userPoints = 0;
+		for (var fd = 0; fd < this.foodDiaryArr.length; fd++) {
+			userPoints += this.foodDiaryArr[fd].points;
+			
+		}
+		console.log(this.foodDiaryArr);
+		return userPoints;
+	}
 }
+
+
+// onSubmit tasks:
+
+//  get points
+// 	add the points
+//  display the added points
+// 	push added points into userpointsarray for storage
+
+// 	push food into food diary Array - gets used in foodDiary area and points area (do in FoodsComponent?)
+
+// 	change the avatar 
+//  if val of obj key [0] is broccoli, change the element
+
+
+
 

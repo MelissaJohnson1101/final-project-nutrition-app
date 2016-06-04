@@ -9,17 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var food_service_1 = require('../services/food.service');
+var food_component_1 = require('../components/food.component');
 var AvatarComponent = (function () {
-    function AvatarComponent() {
+    function AvatarComponent(foodservice) {
+        this.foodservice = foodservice;
     }
+    AvatarComponent.prototype.broccoliChecked = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            if (this.foodservice.checkedFoods[fd].name == "broccoli") {
+                return true;
+            }
+        }
+        return false;
+    };
     AvatarComponent = __decorate([
         core_1.Component({
+            directives: [food_component_1.FoodComponent],
             selector: 'avatar-area',
             templateUrl: 'app/templates/avatar.template.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [food_service_1.FoodService])
     ], AvatarComponent);
     return AvatarComponent;
 }());
 exports.AvatarComponent = AvatarComponent;
+// if (this.foodservice.checkedFoods[fd].name == "broccoli" && this.foodservice.onSubmit() == true) 
 //# sourceMappingURL=avatar.component.js.map

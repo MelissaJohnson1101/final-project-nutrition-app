@@ -1,4 +1,7 @@
+  <div><h3>Pick a Food</h3></div>
     
+    <div class="row">
+    <div class="col 4">
     <div class="food-choice-class"> 
       <ul materialize="collapsible" class="collapsible" data-collapsible="accordion">
           <li *ngFor="let cat of foodservice.listoffoods">
@@ -10,7 +13,7 @@
         <div class="collapsible-body">
           <div *ngFor="let food of cat.foods">
             <div class="input-field">
-              <input type="checkbox" id="food_check{{cat.name}}_{{food.name}}"/>
+              <input type="checkbox" id="food_check{{cat.name}}_{{food.name}}" (change)="isChecked($event, food)"/>
                 <label attr.for="food_check{{cat.name}}_{{food.name}}">{{food.name}}</label> 
             </div>
           </div>
@@ -18,36 +21,20 @@
           </li>
         </ul>
     </div>
-
-
-
-<!-- 
-
-
-<div class="food-choice-toggle">
-  <div class="container">
-    <div class="food-choice-title">
-        <h3>Food Choices</h3>
-        <p>Choose what foods you ate today.</p>
+    </div>
+    <div id="displaycurrentlog" class="col 4">
+    <h5>Today's Food Log</h5>
+    <div *ngFor="let item of foodservice.checkedFoods">{{item.name}} = {{item.points}} points</div>
+    
+    <div>
+    <button id="submitfoods" (click)="onSubmit()">Add to log</button>
+ <!--    <div id="submitfoods" *ngFor="let item of foodservice.checkedFoods">{{item.points}} points</div> -->
+    </div>
+    </div>
     </div>
 
-    <div class="food-choice-class input-field">
-      <div *ngFor="let cat of foodservice.listoffoods">
-		      <h4>{{cat.name}}</h4>
-		      <div *ngFor="let food of cat.foods">
-          <div class = "input-field">
-            <input type="checkbox" id="food_check{{cat.name}}_{{food.name}}"/>
-            <label attr.for="food_check{{cat.name}}_{{food.name}}">{{food.name}}</label>    
-          </div>
-        </div>
-      </div> 
-    </div>  
-  </div>
-</div>
-<br>
 
 
 
 
- -->
 
