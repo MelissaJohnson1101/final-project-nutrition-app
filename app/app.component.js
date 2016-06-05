@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var signin_component_1 = require('./components/signin.component');
 var userloggedin_route_1 = require('./routes/userloggedin.route');
+// import {Modal, BS_MODAL_PROVIDERS} from 'angular2-modal/plugins/bootstrap';
 var AppComponent = (function () {
     function AppComponent() {
     }

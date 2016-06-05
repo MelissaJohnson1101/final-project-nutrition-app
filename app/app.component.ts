@@ -4,6 +4,7 @@ import { FoodComponent } from './components/food.component';
 import { AvatarComponent } from './components/avatar.component';
 import { SignInComponent } from './components/signin.component';
 import { UserLoggedinRoute } from './routes/userloggedin.route';
+// import {Modal, BS_MODAL_PROVIDERS} from 'angular2-modal/plugins/bootstrap';
 
 @Component({
 	selector: 'my-app',

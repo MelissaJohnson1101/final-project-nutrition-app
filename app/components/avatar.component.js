@@ -47,8 +47,6 @@ var AvatarComponent = (function () {
         }
         return false;
     };
-    AvatarComponent.prototype.alert = ;
-    ;
     AvatarComponent = __decorate([
         core_1.Component({
             directives: [food_component_1.FoodComponent],
