@@ -3,18 +3,56 @@
   src: url('styles/fonts/KBGoogleyEyes.ttf');
 }
 
-h1, h2 {
-  text-align: center;
+@media (min-width:992px) {
+    #aside {
+        width:250px;
+    }
 }
+@media (max-width:992px) {
+    #aside.pinned, #aside.pin-bottom {
+        position:static !important;
+        top: auto !important;
+    }
+} 
+
+body{
+  background-color: #759EA4;
+}
+
+a.loginarea {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Coda', cursive;
+  color:white;
+}
+
+h2{
+   text-align: center;
+  font-family: 'Coda', cursive;
+}
+
 h3{
   margin-left: 30px;
   color:white;
+  font-family: 'Coda', cursive;
+}
+.specialh3 {
+  margin-top: 50px;
+  margin-left:0px;
 }
 
 h4 {
   font-size: 26px;
   color: white;
 
+}
+
+h5{
+  padding-top:30px;
+  margin-left:30px;
 }
 nav {
     color: #fff;
@@ -23,6 +61,25 @@ nav {
 }
 .navbar-fixed{
   width: auto;
+  position:absolute;
+  margin:-35px;
+  bottom-margin:50px;
+}
+
+.myorange {
+margin-bottom:50px;
+background-color: #F3BA71;
+}
+button{
+    color: white;
+    /* font: inherit; */
+    margin: 0;
+    background-color: #759EA4;
+    border-radis: 10px;
+    font-family: roboto;
+    font-size: medium;
+    border-radius: 10px;
+    border: none;
 }
 
 #displaycurrentlog {
@@ -31,12 +88,17 @@ nav {
     background-color: white;
     margin-top: 18px;
 }
+#displaycurrentlog h5 {
+    padding-top:0px;
+    margin-left:0px;
+}
 
 #displaypoints {
     width: 75%;
     height: 75%;
     background-color: white;
     margin: 30px;
+    border-radius: 10px;
 }
 
 .row {
@@ -44,7 +106,12 @@ nav {
     margin-right: auto;
     margin-bottom: 0;
 }
-
+.row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    border-radius: 10px;
+  }
 p {
   color:white;
 }
@@ -63,11 +130,13 @@ p {
     min-height: 2.3rem;
     line-height: 2.3rem;
     padding: 0 .5rem;
-    background-color: #E37222;
+    background-color: #E97767;
     opacity: 40%;
     border-bottom: 0;
     width: 100%;
 }
+
+/*old color #E37222;*/
 
 .collapsible-body {
     display: none;
@@ -91,20 +160,27 @@ p {
   width: 100%;
 }
 }
+
 #challenge-area {
   height:500px;
-  background-color: #A4D555;
+  background-color:#8DA374;
 }
+
+/*old color#A4D555;*/
 
 #points-area-div {
   height:500px;
-  background-color: #E37222; 
+  background-color: #E97767; 
 }
 
+/*old color #E37222*/
+
 #foodchoicebackground{
-  background-color: #F9BE02;
+  background-color: #F3BA71;
   height: 500px;
 }
+
+/*old color #F9BE02*/
 
 .food-choice-title{
   color: white;
@@ -117,9 +193,11 @@ p {
 /*background-image: url('../images/animation-direction.gif');*/
  background-repeat: no-repeat;
 /* background-position: 50%;*/
-background-color:#7CDBD5;
+background-color: #ACE9E4;
 height: 500px;
 }
+
+/*old color #7CDBD5*/
 
 .pointsdisp{
   width: 200px;
@@ -134,7 +212,6 @@ height: 500px;
     margin-left: 15px;
     width: 120%;
     padding-right: 100px;
-}
 }
 
 .food-choice-toggle{

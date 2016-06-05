@@ -4,6 +4,11 @@ import { Component, Input } from '@angular/core';
 		selector: 'login-view',
 		templateUrl: 'app/templates/signinform.template.html'
 	})
-	export class SignInComponent{}
+	export class SignInComponent{
+
+	// $(".button-collapse").sideNav();
+	// $('.modal-trigger').leanModal();
+	// $('#aside').pushpin({ top: 110, bottom: 500 });
+	}
 
 

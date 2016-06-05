@@ -19,7 +19,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             directives: [router_1.ROUTER_DIRECTIVES, signin_component_1.SignInComponent, userloggedin_route_1.UserLoggedinRoute],
-            template: "<div>\n\t\t\t  \t<a [routerLink]=\"['/login']\">Login</a>\n\t\t\t  \t<router-outlet></router-outlet>\n\t\t\t  </div>"
+            template: "<div>\n\t\t\t  \t<a class=\"loginarea\" [routerLink]=\"['/login']\">Login</a>\n\t\t\t  \t<router-outlet></router-outlet>\n\t\t\t  </div>"
         }),
         router_1.Routes([
             {

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FoodService } from '../services/food.service';
-import { FoodComponent } from '../components/food.component'
+import { FoodComponent } from '../components/food.component';
+// import {Modal, BS_MODAL_PROVIDERS} from '@angular2-modal/plugins/bootstrap';
 
 @Component({
 	directives: [FoodComponent],
@@ -19,7 +20,33 @@ export class AvatarComponent {
 		}
 		return false;
 	}
+	carrotChecked(){
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "carrot") {
+				return true;
+			}
+		}
+		return false;
+	}
+	asparagusChecked() {
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "asparagus") {
+				return true;
+			}
+		}
+		return false;
+	}
 }
+
+	// candyChecked() {
+	// 	for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+	// 		if (this.foodservice.checkedFoods[fd].name == "candy") {
+	// 			return true;
+	// 		}
+	// 	}
+	// 	return false;
+	// } 
+
 
 
 // if (this.foodservice.checkedFoods[fd].name == "broccoli" && this.foodservice.onSubmit() == true)

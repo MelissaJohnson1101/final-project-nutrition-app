@@ -9,7 +9,7 @@ import { UserLoggedinRoute } from './routes/userloggedin.route';
 	selector: 'my-app',
 	directives: [ROUTER_DIRECTIVES, SignInComponent, UserLoggedinRoute],
     template: `<div>
-			  	<a [routerLink]="['/login']">Login</a>
+			  	<a class="loginarea" [routerLink]="['/login']">Login</a>
 			  	<router-outlet></router-outlet>
 			  </div>`
 })
