@@ -24,9 +24,12 @@
     </div>
     <div id="displaycurrentlog" class="col 4">
     <h5>Today's Food Log</h5>
-    <div *ngFor="let item of foodservice.checkedFoods">{{item.name}} = {{item.points}} points</div>
-    
-    <div>
+    <div id="foodlist">
+    <ul>
+    <li *ngFor="let item of foodservice.checkedFoods">{{item.name}} = {{item.points}} points</li>
+    </ul>
+    </div>
+    <div id="submitbutton">
     <button id="submitfoods" (click)="onSubmit()">Add to log</button>
  <!--    <div id="submitfoods" *ngFor="let item of foodservice.checkedFoods">{{item.points}} points</div> -->
     </div>

@@ -44,6 +44,24 @@ export class AvatarComponent {
 		}
 		return false;
 	}
+
+	quinoaChecked() {
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "quinoa") {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	popsicleChecked(){
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "popsicle") {
+				return true;
+			}
+		}
+		return false;
+	}
 }
 
 

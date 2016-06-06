@@ -2,34 +2,38 @@
 <div class="avatar-boy">
  <div [ngClass]="{broccoliright: broccoliChecked()}"></div>
   <div [ngClass]="{broccolileft: broccoliChecked()}"></div>
+  
 
 
   <div class="creatures">   
-  <div class="human-home">
-    <div class="hat"></div>
-    <div class="head"[ngClass]="{ifAsparagushead: asparagusChecked()}">
- 
-      <div class="eyes left"[ngClass]="{eyeschg: carrotChecked()}">
-        <div class="blink" [ngClass]="{ifAsparagusblink: asparagusChecked()}"></div>
-      </div>
-      <div class="eyes right"[ngClass]="{eyeschg: carrotChecked()}">
-        <div class="blink" [ngClass]="{ifAsparagusblink: asparagusChecked()}"></div>
-      </div>
-      <div class="mouth" [ngClass]="{ifBroccolimouth: broccoliChecked()}" ></div>
+    <div class="human-home" [ngClass]="{ifPopsicle: popsicleChecked()}">
+      <div class="hat"></div>
+        <div class="head"[ngClass]="{ifAsparagushead: asparagusChecked()}">
+          <div class="eyes left"[ngClass]="{eyeschg: carrotChecked()}">
+            <div class="blink" [ngClass]="{ifAsparagusblink: asparagusChecked()}"></div>
+          </div>
+            <div class="eyes right"[ngClass]="{eyeschg: carrotChecked()}">
+              <div class="blink" [ngClass]="{ifAsparagusblink: asparagusChecked()}"></div>
+            </div>
+              <div class="mouth" [ngClass]="{ifBroccolimouth: broccoliChecked()}" ></div>
+        </div>
+   
+        <div class="body">
+          <div class="top"></div>
+          <div class="left side"></div>
+          <div class="right side wavearm"></div>
+         
+          <div class="shirt"></div>
+           <div [ngClass]="{heart: quinoaChecked()}"></div>
+        </div>
+
+        <div class="legs">
+          <div class="leg left"></div>
+          <div class="leg right"></div>
+        </div>
+           <div class="feet"></div>
     </div>
-    <div class="body">
-      <div class="top"></div>
-      <div class="left side"></div>
-      <div class="right side wavearm"></div>
-      <div class="shirt"></div>
-    </div>
-    <div class="legs">
-      <div class="leg left"></div>
-      <div class="leg right"></div>
-    </div>
-    <div class="feet"></div>
   </div>
-</div>
 </div> 
 
 

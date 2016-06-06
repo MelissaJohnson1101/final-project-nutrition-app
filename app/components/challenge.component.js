@@ -9,11 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var angular2_materialize_1 = require("angular2-materialize");
+// import { Modal } from 'angular2-modal';
 var ChallengeComponent = (function () {
     function ChallengeComponent() {
     }
+    ChallengeComponent.prototype.modalClick = function () {
+        $(document).ready(function () {
+            $('.modal-trigger').leanModal();
+        });
+    };
     ChallengeComponent = __decorate([
         core_1.Component({
+            directives: [angular2_materialize_1.MaterializeDirective],
+            // providers: [Modal],
             selector: 'challenge-area',
             templateUrl: 'app/templates/challenge.template.html'
         }), 

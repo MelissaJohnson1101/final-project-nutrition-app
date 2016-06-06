@@ -12,14 +12,18 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var signin_component_1 = require('./components/signin.component');
 var userloggedin_route_1 = require('./routes/userloggedin.route');
-// import {Modal, BS_MODAL_PROVIDERS} from 'angular2-modal/plugins/bootstrap';
+var bootstrap_1 = require('angular2-modal/plugins/bootstrap');
 var AppComponent = (function () {
-    function AppComponent() {
+    // constructor() { } 
+    function AppComponent(modal, viewContainer) {
+        this.modal = modal;
+        modal.defaultViewContainer = viewContainer;
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             directives: [router_1.ROUTER_DIRECTIVES, signin_component_1.SignInComponent, userloggedin_route_1.UserLoggedinRoute],
+            viewProviders: [bootstrap_1.BS_MODAL_PROVIDERS],
             template: "<div>\n\t\t\t  \t<a class=\"loginarea\" [routerLink]=\"['/login']\">Login</a>\n\t\t\t  \t<router-outlet></router-outlet>\n\t\t\t  </div>"
         }),
         router_1.Routes([
@@ -36,7 +40,7 @@ var AppComponent = (function () {
                 component: userloggedin_route_1.UserLoggedinRoute
             }
         ]), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [bootstrap_1.Modal, core_1.ViewContainerRef])
     ], AppComponent);
     return AppComponent;
 }());

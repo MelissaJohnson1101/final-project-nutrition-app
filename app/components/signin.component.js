@@ -9,15 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require("@angular/router");
+// import { UserLoggedinRoute } from '../routes/userloggedin.route';
+// import { FoodService } from "../services/food.service";
 var SignInComponent = (function () {
-    function SignInComponent() {
+    function SignInComponent(router) {
+        this.router = router;
+        this.model = {
+            first_name: "",
+            last_name: "",
+            password: "",
+            email: "",
+        };
     }
+    SignInComponent.prototype.goToUserLoggedIn = function () {
+        this.router.navigate(["/userloggedin"]);
+    };
     SignInComponent = __decorate([
         core_1.Component({
             selector: 'login-view',
             templateUrl: 'app/templates/signinform.template.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], SignInComponent);
     return SignInComponent;
 }());

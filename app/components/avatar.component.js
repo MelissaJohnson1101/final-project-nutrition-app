@@ -47,6 +47,22 @@ var AvatarComponent = (function () {
         }
         return false;
     };
+    AvatarComponent.prototype.quinoaChecked = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            if (this.foodservice.checkedFoods[fd].name == "quinoa") {
+                return true;
+            }
+        }
+        return false;
+    };
+    AvatarComponent.prototype.popsicleChecked = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            if (this.foodservice.checkedFoods[fd].name == "popsicle") {
+                return true;
+            }
+        }
+        return false;
+    };
     AvatarComponent = __decorate([
         core_1.Component({
             directives: [food_component_1.FoodComponent],
