@@ -2,8 +2,6 @@
 <div class="avatar-boy">
  <div [ngClass]="{broccoliright: broccoliChecked()}"></div>
   <div [ngClass]="{broccolileft: broccoliChecked()}"></div>
-  
-
 
   <div class="creatures">   
     <div class="human-home" [ngClass]="{ifPopsicle: popsicleChecked()}">
@@ -18,7 +16,7 @@
               <div class="mouth" [ngClass]="{ifBroccolimouth: broccoliChecked()}" ></div>
         </div>
    
-        <div class="body">
+        <div class="body" [ngClass]="{growmiddle: candyChecked()}">
           <div class="top"></div>
           <div class="left side"></div>
           <div class="right side wavearm"></div>

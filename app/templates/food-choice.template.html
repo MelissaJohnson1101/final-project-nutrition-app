@@ -26,7 +26,7 @@
     <h5>Today's Food Log</h5>
     <div id="foodlist">
     <ul>
-    <li *ngFor="let item of foodservice.checkedFoods">{{item.name}} = {{item.points}} points</li>
+    <li *ngFor="let item of foodservice.checkedFoods"><img src= "{{item.img}}" class="smallimg">{{item.name}} = {{item.points}} points</li>      
     </ul>
     </div>
     <div id="submitbutton">

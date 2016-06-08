@@ -9,7 +9,17 @@
         position:static !important;
         top: auto !important;
     }
+}
+
+.smallimg{
+  height: 30px;
+  width: 30px;
+
+}
+.cardstyle{
+  margin-left: 15px;
 } 
+
 .exercise{
   margin-top: 30px;
 }
@@ -18,9 +28,15 @@
   margin-top: 30px;
 }
 
+.challengelabel{
+  color:grey !important;
+  margin-top: 0px;
+  margin-left: 40px;
+}
+
 .challengeflip-container {/*this is the boundaries of the card*/
+  margin-left: 40px;
   height: 240px;
-/*  perspective: 600;*/
   position: relative;
   width: 150px;
 }
@@ -40,7 +56,7 @@
   height: 100%;
   position: absolute;
   width: 100%;
-  background-color: #ACE9E4;
+  background-color: #759EA4;
   color:white;
   border-radius: 10px;
 }
@@ -51,6 +67,10 @@
 
 .space{
     margin-right:25px;
+}
+
+.leftspace{
+    margin-left:30px;
 }
 
 body{

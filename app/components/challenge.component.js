@@ -10,23 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var angular2_materialize_1 = require("angular2-materialize");
-// import { Modal } from 'angular2-modal';
+var food_service_1 = require("../services/food.service");
 var ChallengeComponent = (function () {
-    function ChallengeComponent() {
+    function ChallengeComponent(foodservice) {
+        this.foodservice = foodservice;
     }
-    ChallengeComponent.prototype.modalClick = function () {
-        $(document).ready(function () {
-            $('.modal-trigger').leanModal();
-        });
+    ChallengeComponent.prototype.challChecked = function ($event) {
+        var checked = $event.target.checked;
     };
     ChallengeComponent = __decorate([
         core_1.Component({
             directives: [angular2_materialize_1.MaterializeDirective],
-            // providers: [Modal],
             selector: 'challenge-area',
             templateUrl: 'app/templates/challenge.template.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [food_service_1.FoodService])
     ], ChallengeComponent);
     return ChallengeComponent;
 }());

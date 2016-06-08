@@ -10,19 +10,23 @@ export class FoodService{
 			foods: [
 				{
 					name: "broccoli",
-					points: 5
+					points: 5,
+					img: 'app/images/broccoli5.png'
 				},
 				{
 					name: "carrot",
-					points: 2
+					points: 2,
+					img: 'app/images/carrots18.png'
 				},
 				{
 					name: "green beans",
-					points: 3
+					points: 3,
+					img: 'app/images/greenbean.png'
 				},
 				{
 					name: "asparagus",
-					points: 5
+					points: 5,
+					img: 'app/images/asparagusSM.png'
 				}
 			]
 		},
@@ -32,19 +36,23 @@ export class FoodService{
 			foods: [
 				{
 					name: "apples",
-					points: 4
+					points: 4,
+					img: 'app/images/apple.png'
 				},
 				{
 					name: "strawberries",
-					points: 3
+					points: 3,
+					img: 'app/images/strawberry.png'
 				},
 				{
 					name: "peaches",
-					points: 3
+					points: 3,
+					img: 'app/images/peach.png'
 				},
 				{
 					name: "watermelon",
-					points: 6
+					points: 6,
+					img: 'app/images/watermelon.png'
 				}
 			]
 		},
@@ -61,7 +69,8 @@ export class FoodService{
 				},
 				{
 					name: "quinoa",
-					points: 2
+					points: 2,
+					img: 'app/images/quinoa.png'
 				},
 				{
 					name: "millet",
@@ -75,7 +84,7 @@ export class FoodService{
 			foods: [
 				{
 					name: "milk",
-					points: 2
+					points: 2,
 				},
 				{
 					name: "cheese",
@@ -96,15 +105,18 @@ export class FoodService{
 			foods: [
 				{
 					name: "popsicle",
-					points: 1
+					points: 1,
+					img: 'app/images/popsicle.jpg'
 				},
 				{
 					name: "candy",
-					points: -3
+					points: -3,
+					img: 'app/images/candy.png'
 				},
 				{
 					name: "fruit",
-					points: 3
+					points: 3,
+					img: 'app/images/apple.png'
 				}
 			]
 		}

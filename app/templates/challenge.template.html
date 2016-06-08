@@ -1,25 +1,44 @@
 <div>
-	<h3>Pick your challenge</h3>
-		<div class="row" id="displaychallenge">
+	<h3>Pick a challenge</h3>
+		<form materialize class="row" id="displaychallenge">
+			<p class="challengelabel">Hold your cursor over a challenge area, do the challenge and click yes for points.</p>
+
+			<div *ngFor="let challenge of challenges">
+			    <input type="checkbox" [(ngModel)]=challenge.complete >
+			</div>
+
 
  			<div class="col 4 space exercise">
  				<div class="challengeflip-container">
 				  <div class="challengeflip">
-				    <div class="side"><h5>Exercise</h5></div>
+				    <div class="side">
+				    <h5>Exercise</h5><br>
+					<p class="cardstyle">20 jumping jacks</p>
+				    </div>
 				    <div class="side back"><img src='app/images/JumpingJacks.gif'></div>
 				  </div>
 				</div>
-	    	</div>
-
+	<div class="input-field challengelabel">
+	<input id="exerciseChallenge" type="checkbox" (change)="challChecked($event)">
+	<label for="exerciseChallenge">Yes</label>
+	</div>
+	    </div>
 	    	<div class="col 4 breathe">
 	    		<div class="challengeflip-container">
 				  <div class="challengeflip">
-				    <div class="side"><h5>Breathe</h5></div>
+				    <div class="side">
+				    <h5>Breathe</h5><br>
+					<p class="cardstyle">10 deep breaths</p>
+				    </div>
 				    <div class="side back"><img src='app/images/breath-gif.gif'></div>
 				  </div>
 				</div>
-	    	</div>	
+	<div class="input-field challengelabel">
+	<input id="breatheChallenge" type="checkbox" (change)="challChecked($event)">
+	<label for="breatheChallenge">Yes</label>
 	</div>
+	    	</div>	
+		</form>
 </div>
 
 
