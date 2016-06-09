@@ -73,6 +73,38 @@ var AvatarComponent = (function () {
         }
         return false;
     };
+    AvatarComponent.prototype.strawberryChecked = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            if (this.foodservice.checkedFoods[fd].name == "strawberries") {
+                return true;
+            }
+        }
+        return false;
+    };
+    AvatarComponent.prototype.peachesChecked = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            if (this.foodservice.checkedFoods[fd].name == "peaches") {
+                return true;
+            }
+        }
+        return false;
+    };
+    AvatarComponent.prototype.applesChecked = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            if (this.foodservice.checkedFoods[fd].name == "apples") {
+                return true;
+            }
+        }
+        return false;
+    };
+    AvatarComponent.prototype.watermelonChecked = function () {
+        for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+            if (this.foodservice.checkedFoods[fd].name == "watermelon") {
+                return true;
+            }
+        }
+        return false;
+    };
     AvatarComponent = __decorate([
         core_1.Component({
             directives: [food_component_1.FoodComponent],

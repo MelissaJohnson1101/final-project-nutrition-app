@@ -72,6 +72,41 @@ export class AvatarComponent {
 		} 
 		return false;
 	}
+
+	strawberryChecked() {
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "strawberries") {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	peachesChecked() {
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "peaches") {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	applesChecked() {
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "apples") {
+				return true;
+			}
+		}
+		return false;
+	}
+	watermelonChecked() {
+		for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
+			if (this.foodservice.checkedFoods[fd].name == "watermelon") {
+				return true;
+			}
+		}
+		return false;
+	}
 }
 
 

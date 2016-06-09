@@ -1,4 +1,42 @@
 
+/*Fruit - points area*/
+ .basket{
+    height: 150px;
+    position: absolute;
+    margin-top: 250;
+    margin-left: 200;
+  }
+.strawberry{
+    content: url("../images/strawberry.png");
+    position: absolute;
+    height: 75px;
+    margin-top:290px;
+    margin-left: 250px;
+  }
+
+  .peach{
+    content: url("../images/peach.png");
+    position: absolute;
+    height: 75px;
+    margin-top:235px;
+    margin-left: 250px;
+  }
+    .apple{
+    content: url("../images/apple.png");
+    position: absolute;
+    height: 75px;
+    margin-top:175px;
+    margin-left: 250px;
+  }
+
+  .watermelon{
+    content: url("../images/watermelon.png");
+    position: absolute;
+    height: 75px;
+    margin-top:120px;
+    margin-left: 250px;
+  }
+
 .growmiddle{
   animation: bounceIn 3s .3s ;
   }
@@ -153,15 +191,20 @@
 }
 
 .exerciseJump{
-   -webkit-animation-name: wavearm;
+    -webkit-animation-name: jump;
     -webkit-animation-duration: 2s;
-    -webkit-animation-interation-count: infinite;
+    -webkit-animation-interation-count: 10;
+    animation: jump ease-in-out infinite;
+
+    -webkit-animation-name: wavearm;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-interation-count: 10;
     transform-origin: top right;
     animation: wavearm ease-in-out infinite;
     transform-origin: top right;  
     animation-duration: 2s;
     animation:-interation-count: infinite;
-}
+
 
 @-webkit-keyframes wavearm {
     0%   {-webkit-transform: rotate(0deg);}
@@ -178,5 +221,65 @@
     75% {-webkit-transform: rotate(-5deg);}
     100%  {-webkit-transform: rotate(0deg);}
     }
+
+@webkit-animation{ jump 1.5s ease 0s infinite normal ;
+ animation: jump 1.5s ease 0s infinite normal ;
+}
+
+@-webkit-keyframes jump {
+ 0%{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+ }
+ 20%{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+ }
+ 40%{
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+ }
+ 50%{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+ }
+ 60%{
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+ }
+ 80%{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+ }
+ 100%{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+ }
+}
+
+@keyframes jump {
+ 0%{
+  transform: translateY(0);
+ }
+ 20%{
+  transform: translateY(0);
+ }
+ 40%{
+  transform: translateY(-30px);
+ }
+ 50%{
+  transform: translateY(0);
+ }
+ 60%{
+  transform: translateY(-15px);
+ }
+ 80%{
+  transform: translateY(0);
+ }
+ 100%{
+  transform: translateY(0);
+ }
+}
+}
 
 

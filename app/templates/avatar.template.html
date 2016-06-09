@@ -1,9 +1,20 @@
 
 <div class="avatar-boy">
+
  <div [ngClass]="{broccoliright: broccoliChecked()}"></div>
   <div [ngClass]="{broccolileft: broccoliChecked()}"></div>
 
+
   <div class="creatures">   
+    <div> <img class="sun" src="app/images/sun.png"></div>
+      <div> <img class="basket" src="app/images/basket.png"></div>
+       <div [ngClass]="{strawberry: strawberryChecked()}"></div>
+       <div [ngClass]="{peach: peachesChecked()}"></div>
+       <div [ngClass]="{apple: applesChecked()}"></div>
+       <div [ngClass]="{watermelon: watermelonChecked()}"></div>
+
+        
+    
     <div class="human-home" [ngClass]="{ifPopsicle: popsicleChecked()}">
       <div class="hat"></div>
         <div class="head"[ngClass]="{ifAsparagushead: asparagusChecked()}">

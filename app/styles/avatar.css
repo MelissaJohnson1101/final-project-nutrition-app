@@ -3,6 +3,12 @@
     25%  {top: 500px;}
     75%  {top: 20px}
     100% {top: 50px;}*/
+.sun{
+    border: 0;
+    position: absolute;
+    margin-left: -250;
+    height: 150px;
+  }
 
 .avatar-boy {
   width: 100px;
