@@ -28,10 +28,18 @@
   margin-top: 30px;
 }
 
-.challengelabel{
+.challengelabel {
   color:grey !important;
   margin-top: 0px;
   margin-left: 40px;
+}
+
+p .challengelabel{
+  margin-top:10px;
+}
+
+.challengelabel label{
+  color:grey !important;
 }
 
 .challengeflip-container {/*this is the boundaries of the card*/
@@ -39,6 +47,7 @@
   height: 240px;
   position: relative;
   width: 150px;
+  margin-top:0px;
 }
 .challengeflip{
   height: 100%;
@@ -63,6 +72,15 @@
 .challengeflip .back {/*back of card*/
   transform: rotateY(180deg);
   border-radius: 10px;
+}
+
+.titlemargin{
+  margin-left: 0px;
+}
+
+.input-field label.greylabel {
+  margin-left: 40px;
+  color:gray;
 }
 
 .space{

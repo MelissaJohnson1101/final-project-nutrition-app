@@ -131,6 +131,7 @@ var FoodService = (function () {
     }
     FoodService.prototype.getUserPoints = function () {
         var userPoints = 0;
+        var coins = 0;
         for (var fd = 0; fd < this.foodDiaryArr.length; fd++) {
             userPoints += this.foodDiaryArr[fd].points;
         }

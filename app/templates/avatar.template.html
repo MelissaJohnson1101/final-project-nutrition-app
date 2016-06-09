@@ -18,8 +18,8 @@
    
         <div class="body" [ngClass]="{growmiddle: candyChecked()}">
           <div class="top"></div>
-          <div class="left side"></div>
-          <div class="right side wavearm"></div>
+          <div class="left side" [ngClass]="{exerciseJump: exerciseChecked()}"></div>
+          <div class="right side" [ngClass]="{exerciseJump: exerciseChecked()}" ></div>
          
           <div class="shirt"></div>
            <div [ngClass]="{heart: quinoaChecked()}"></div>

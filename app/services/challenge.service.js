@@ -15,17 +15,30 @@ var ChallengeService = (function () {
             {
                 "name": "jumping jacks",
                 "img": "app/images/JumpingJacks.gif",
+                "title": "Exercise",
+                "instruct": "20 jumping jacks",
                 "points": 10,
                 "complete": false
             },
             {
                 "name": "breathe",
                 "img": "app/images/breath-gif.gif",
+                "title": "Breathe",
+                "instruct": "10 deep breaths",
                 "points": 10,
                 "complete": false
             }
         ];
     }
+    ChallengeService.prototype.getChallengePoints = function () {
+        var userChallPoints = 0;
+        for (var c = 0; c < this.challenges.length; c++) {
+            if (this.challenges[c].complete == true) {
+                userChallPoints += this.challenges[c].points;
+            }
+        }
+        return userChallPoints;
+    };
     ChallengeService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

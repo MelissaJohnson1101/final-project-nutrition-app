@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, Renderer, Injector, provide } from '@angular/core';
 import { MaterializeDirective } from "angular2-materialize";
 import { FoodService } from "../services/food.service";
+import { ChallengeService } from '../services/challenge.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { FoodService } from "../services/food.service";
 })
 
 export class ChallengeComponent { 
-	constructor (private foodservice: FoodService) {}
+	constructor (private foodservice: FoodService, private challengeservice: ChallengeService) {}
 
 
 	challChecked($event) {

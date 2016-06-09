@@ -128,14 +128,17 @@ export class FoodService{
 
 	getUserPoints(){
 		let userPoints = 0;
+		let coins = 0;
 		for (var fd = 0; fd < this.foodDiaryArr.length; fd++) {
 			userPoints += this.foodDiaryArr[fd].points;
 		}
 		if (this.foodDiaryArr[fd] == "candy") {
 			userPoints -= this.foodDiaryArr[fd].points;
-		} return userPoints;
+		} 
+		return userPoints;
+		}	
 	}
-}
+
 
 
 

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FoodService } from '../services/food.service';
 import { FoodComponent } from '../components/food.component';
+import { ChallengeService} from '../services/challenge.service';
 
 @Component({
 	directives: [FoodComponent],
@@ -9,7 +10,7 @@ import { FoodComponent } from '../components/food.component';
 })
 
 export class AvatarComponent {
-	constructor(private foodservice: FoodService) { }
+	constructor(private foodservice: FoodService, private challengeservice: ChallengeService) { }
 
 
 	broccoliChecked() {
@@ -60,6 +61,15 @@ export class AvatarComponent {
 				return true;
 			}
 		}
+		return false;
+	}
+
+	exerciseChecked(){
+		for (var c = 0; c < this.challengeservice.challenges.length; c++) {
+			if (this.challengeservice.challenges[c].complete == true) {
+				return true;
+			}
+		} 
 		return false;
 	}
 }

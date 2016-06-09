@@ -233,29 +233,6 @@ body {
   border-radius: 50%;
   right: -21px;
 }
-  /*-webkit-animation-name: wavearm;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-interation-count: infinite;
-     transform-origin: top right;
-    animation: wavearm ease-in-out infinite;
-      transform-origin: top right;  
-    animation-duration: 2s;
-    animation:-interation-count: infinite;
-}
-@-webkit-keyframes wavearm {
-    0%   {-webkit-transform: rotate(0deg);}
-    25% {-webkit-transform: rotate(-30deg);} 
-    50% {-webkit-transform: rotate(10deg);} 
-    75% {-webkit-transform: rotate(-5deg);}
-  100%  {-webkit-transform: rotate(0deg);}
-    }
-@keyframes wavearm {
-    0%   {-webkit-transform: rotate(0deg);}
-    25% {-webkit-transform: rotate(-30deg);} 
-    50% {-webkit-transform: rotate(10deg);} 
-    75% {-webkit-transform: rotate(-5deg);}
-  100%  {-webkit-transform: rotate(0deg);}
-    }*/
 
 .human-login .body .shirt {
   height: 160px;

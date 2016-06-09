@@ -11,9 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var angular2_materialize_1 = require("angular2-materialize");
 var food_service_1 = require("../services/food.service");
+var challenge_service_1 = require('../services/challenge.service');
 var ChallengeComponent = (function () {
-    function ChallengeComponent(foodservice) {
+    function ChallengeComponent(foodservice, challengeservice) {
         this.foodservice = foodservice;
+        this.challengeservice = challengeservice;
     }
     ChallengeComponent.prototype.challChecked = function ($event) {
         var checked = $event.target.checked;
@@ -24,7 +26,7 @@ var ChallengeComponent = (function () {
             selector: 'challenge-area',
             templateUrl: 'app/templates/challenge.template.html'
         }), 
-        __metadata('design:paramtypes', [food_service_1.FoodService])
+        __metadata('design:paramtypes', [food_service_1.FoodService, challenge_service_1.ChallengeService])
     ], ChallengeComponent);
     return ChallengeComponent;
 }());

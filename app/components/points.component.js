@@ -10,16 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var food_service_1 = require('../services/food.service');
+var challenge_service_1 = require('../services/challenge.service');
 var PointsComponent = (function () {
-    function PointsComponent(foodservice) {
+    function PointsComponent(foodservice, challengeservice) {
         this.foodservice = foodservice;
+        this.challengeservice = challengeservice;
     }
     PointsComponent = __decorate([
         core_1.Component({
             selector: 'points-area',
             templateUrl: "app/templates/points-area.template.html"
         }), 
-        __metadata('design:paramtypes', [food_service_1.FoodService])
+        __metadata('design:paramtypes', [food_service_1.FoodService, challenge_service_1.ChallengeService])
     ], PointsComponent);
     return PointsComponent;
 }());

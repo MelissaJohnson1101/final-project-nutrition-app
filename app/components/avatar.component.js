@@ -11,9 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var food_service_1 = require('../services/food.service');
 var food_component_1 = require('../components/food.component');
+var challenge_service_1 = require('../services/challenge.service');
 var AvatarComponent = (function () {
-    function AvatarComponent(foodservice) {
+    function AvatarComponent(foodservice, challengeservice) {
         this.foodservice = foodservice;
+        this.challengeservice = challengeservice;
     }
     AvatarComponent.prototype.broccoliChecked = function () {
         for (var fd = 0; fd < this.foodservice.checkedFoods.length; fd++) {
@@ -63,13 +65,21 @@ var AvatarComponent = (function () {
         }
         return false;
     };
+    AvatarComponent.prototype.exerciseChecked = function () {
+        for (var c = 0; c < this.challengeservice.challenges.length; c++) {
+            if (this.challengeservice.challenges[c].complete == true) {
+                return true;
+            }
+        }
+        return false;
+    };
     AvatarComponent = __decorate([
         core_1.Component({
             directives: [food_component_1.FoodComponent],
             selector: 'avatar-area',
             templateUrl: 'app/templates/avatar.template.html'
         }), 
-        __metadata('design:paramtypes', [food_service_1.FoodService])
+        __metadata('design:paramtypes', [food_service_1.FoodService, challenge_service_1.ChallengeService])
     ], AvatarComponent);
     return AvatarComponent;
 }());

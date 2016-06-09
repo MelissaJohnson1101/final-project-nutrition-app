@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FoodService } from '../services/food.service';
+import { ChallengeService } from '../services/challenge.service';
 
 @Component({
 
@@ -8,7 +9,7 @@ import { FoodService } from '../services/food.service';
 
 })
 export class PointsComponent {
-	constructor(private foodservice: FoodService) { }
+	constructor(private foodservice: FoodService, private challengeservice: ChallengeService) { }
 }
 
 
